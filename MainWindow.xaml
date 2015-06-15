@@ -1,0 +1,57 @@
+﻿<Window x:Class="THCardDealer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Invitational Tournament" Height="450" Width="525" Closing="Window_Closing" ContentRendered="Window_ContentRendered">
+    <Grid Background="#F2F2F2">
+            <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="111"/>
+            <ColumnDefinition Width="155"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0"  VerticalAlignment="Center" Content="Gmail account:" FontSize="13" Background="#f2f2f2" BorderBrush="#f2f2f2" Margin="10,0,0,10"/>
+
+        <Label Grid.Row="1"  VerticalAlignment="Center" Content="Hand #:" FontSize="13" Background="#f2f2f2" BorderBrush="#f2f2f2" Margin="10,0,0,10"/>
+        <TextBox Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Width="44" FontSize="13" Background="#f2f2f2" Margin="0,0,0,0" x:Name="handNumber"/>
+
+        <Label Grid.Row="2"  VerticalAlignment="Center" Content="Small blind:" FontSize="13" Background="#f2f2f2" BorderBrush="#f2f2f2" Margin="10,0,0,10"/>
+        <TextBox Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Width="66" FontSize="13" Background="#f2f2f2" Margin="0,0,0,0" x:Name="SmallBlind"/>
+
+        <Label Grid.Row="3"  VerticalAlignment="Center" Content="Big blind:" FontSize="13" Background="#f2f2f2" BorderBrush="#f2f2f2" Margin="10,0,0,10"/>
+        <TextBox Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Width="66" FontSize="13" Background="#f2f2f2" Margin="0,0,0,0" x:Name="BigBlind"/>
+
+        <Button Margin="10,10,10,10" Grid.Row="4" x:Name="btnDeal" Click="btnDeal_Click" Content="Deal!" />
+        <Label Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" Content="Cards In Deck : 52" FontSize="13" Background="#f2f2f2" BorderBrush="#f2f2f2" Margin="10,0,0,10" x:Name="lblCardsLeft"/>
+        <Label Grid.Row="5"  VerticalAlignment="Top" Content="Sending..." FontSize="13" Background="#f2f2f2" Foreground="Green" BorderBrush="#f2f2f2" Margin="10,0,0,10" x:Name="lblSending" Visibility="Hidden"/>
+        <Button Margin="10,10,10,10" Grid.Row="5" Grid.Column="2" Height="55" VerticalAlignment="Bottom" x:Name="btnReset" Click="btnReset_Click" Content="Reset" />
+
+        <StackPanel HorizontalAlignment="Left" Grid.Column="1" Grid.Row="0" Orientation="Vertical" VerticalAlignment="Center">
+            <TextBox  VerticalAlignment="Center" HorizontalAlignment="Left" Width="111" FontSize="13" Text="Email address" Background="#f2f2f2" Margin="0,0,0,0" x:Name="Email" GotFocus="Email_GotFocus"/>
+            <PasswordBox  VerticalAlignment="Center" HorizontalAlignment="Left" Width="111" FontSize="13" Background="#f2f2f2" Margin="0,0,0,0" x:Name="Password"/>
+
+        </StackPanel>
+        
+        <StackPanel HorizontalAlignment="Left" Grid.Column="2" Grid.Row="0" Grid.RowSpan="6" Orientation="Vertical">
+            <Label  HorizontalAlignment="Left" VerticalAlignment="Center" Content="Players:" FontSize="23" Background="#f2f2f2" BorderBrush="#f2f2f2" Margin="0,0,0,10"/>
+            <TextBox  VerticalAlignment="Center" HorizontalAlignment="Left" Width="222" FontSize="13" Background="#f2f2f2" x:Name="Email1" Margin="0,0,0,10"/>
+            <TextBox  VerticalAlignment="Center" HorizontalAlignment="Left" Width="222" FontSize="13" Background="#f2f2f2" x:Name="Email2" Margin="0,0,0,10"/>
+            <TextBox  VerticalAlignment="Center" HorizontalAlignment="Left" Width="222" FontSize="13" Background="#f2f2f2" x:Name="Email3" Margin="0,0,0,10"/>
+            <TextBox  VerticalAlignment="Center" HorizontalAlignment="Left" Width="222" FontSize="13" Background="#f2f2f2" x:Name="Email4" Margin="0,0,0,10"/>
+            <TextBox  VerticalAlignment="Center" HorizontalAlignment="Left" Width="222" FontSize="13" Background="#f2f2f2" x:Name="Email5" Margin="0,0,0,10"/>
+            <TextBox  VerticalAlignment="Center" HorizontalAlignment="Left" Width="222" FontSize="13" Background="#f2f2f2" x:Name="Email6" Margin="0,0,0,10"/>
+            <TextBox  VerticalAlignment="Center" HorizontalAlignment="Left" Width="222" FontSize="13" Background="#f2f2f2" x:Name="Email7" Margin="0,0,0,10"/>
+            <TextBox  VerticalAlignment="Center" HorizontalAlignment="Left" Width="222" FontSize="13" Background="#f2f2f2" x:Name="Email8" Margin="0,0,0,10"/>
+            <TextBox  VerticalAlignment="Center" HorizontalAlignment="Left" Width="222" FontSize="13" Background="#f2f2f2" x:Name="Email9" Margin="0,0,0,10"/>
+
+        </StackPanel>
+    </Grid>
+</Window>
